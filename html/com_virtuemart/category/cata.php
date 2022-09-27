@@ -35,7 +35,9 @@ if (vRequest::getInt('dynamic',false) and vRequest::getInt('virtuemart_product_i
 
 	return ;
 }
-?> <div class="category-view"> <?php
+?> <div class="category-view">
+    <!-- template: <?= __FILE__ .' '. __LINE__ ?>-->
+    <?php
 $js = "
 jQuery(document).ready(function () {
 	jQuery('.orderlistcontainer').hover(

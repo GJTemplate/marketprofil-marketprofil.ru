@@ -19,6 +19,7 @@ function isMobile() {
 $not_mobile = !(isMobile());
 
 
+
 /**
  * START - Изменение canonical для результатов фильтрации -- скопировать на продакшн
  */

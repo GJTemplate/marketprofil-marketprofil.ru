@@ -35,7 +35,9 @@ if (vRequest::getInt('dynamic',false) and vRequest::getInt('virtuemart_product_i
 
 	return ;
 }
-?> <div class="category-view"> <?php
+?> <div class="category-view">
+    <!-- template: <?= __FILE__ .' '. __LINE__ ?>-->
+    <?php
 $js = "
 jQuery(document).ready(function () {
 	jQuery('.orderlistcontainer').hover(
@@ -47,7 +49,7 @@ jQuery(document).ready(function () {
 	vmJsApi::addJScript('vm-hover',$js);
 
 	if (!empty($this->category->category_name)) { ?>
-		<h1><?php echo vmText::_($this->category->category_name); ?></h1>
+		<h1><?php echo vmText::_($this->category->category_name); ?>1111111</h1>
 	<?php } 
 	if ($this->show_store_desc and !empty($this->vendor->vendor_store_desc)) { ?>
 		<div class="vendor-store-desc">

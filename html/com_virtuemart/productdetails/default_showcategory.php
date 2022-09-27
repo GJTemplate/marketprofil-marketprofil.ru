@@ -29,8 +29,12 @@ defined ( '_JEXEC' ) or die ( 'Restricted access' );
 	    ?>
 
 	    <div class="category-view">
-
+            <!-- template: <?= __FILE__ .' '. __LINE__ ?>-->
 		<?php
+
+
+
+
 		// Start the Output
 		if (!empty($this->category->children)) {
 		    foreach ($this->category->children as $category) {

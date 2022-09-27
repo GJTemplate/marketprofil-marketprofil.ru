@@ -20,6 +20,9 @@
 
 defined ('_JEXEC') or die('Restricted access');
 
+
+
+
 if (vRequest::getInt('dynamic',false) and vRequest::getInt('virtuemart_product_id',false)) {
     if (!empty($this->products)) {
         if($this->fallback){
@@ -35,7 +38,12 @@ if (vRequest::getInt('dynamic',false) and vRequest::getInt('virtuemart_product_i
 
     return ;
 }
-?> <div class="category-view"> <?php
+?> <div class="category-view">
+    <!-- template: <?= __FILE__ .' '. __LINE__ ?>-->
+    <?php
+
+
+
     $js = "
 jQuery(document).ready(function () {
 	jQuery('.orderlistcontainer').hover(
@@ -45,6 +53,24 @@ jQuery(document).ready(function () {
 	});
 	";
     vmJsApi::addJScript('vm-hover',$js);
+
+
+    /**
+     * Установка значения для тега <h1 />.
+     * Настраивается в настройках компонента фильтра
+     * - {{CATEGORY_NAME}} - Названия категории товаров в которой работает фильтрация
+     * - {{FILTER_LIST}} - Название фильтра и перечисление значений :
+     *      -> Вид поверхности: Глянцевые, Цвет: 5005 Синий насыщенный и 9006 Белый алюминий, Тип покрытия: Colorcoat Prisma®
+     * - {{FILTER_VALUE_LIST}} Только значения фильтров через запятую :
+     *      -> Глянцевые, 5005 Синий насыщенный, 9006 Белый алюминий, Colorcoat Prisma®
+     */
+    $app = \Joomla\CMS\Factory::getApplication();
+    $tag_h1 = $app->get('filter_data_h1' , false );
+
+    if ( $tag_h1 && !empty($this->category->category_name) )
+    {
+        $this->category->category_name = $tag_h1 ;
+    }#END IF
 
     if (!empty($this->category->category_name)) { ?>
         <h1><?php echo vmText::_($this->category->category_name); ?></h1>

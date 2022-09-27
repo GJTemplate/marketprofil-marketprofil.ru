@@ -43,7 +43,7 @@ if ($categories) {
   ?>
 
   <div class="category-view">
-
+    <!-- template: <?= __FILE__ .' '. __LINE__ ?>-->
     <?php 
 
 // Start the Output

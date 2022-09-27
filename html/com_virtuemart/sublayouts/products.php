@@ -10,6 +10,10 @@
  * @version $Id: cart.php 7682 2014-02-26 17:07:20Z Milbo $
  */
 
+
+
+
+
 defined('_JEXEC') or die('Restricted access');
 $products_per_row = empty($viewData['products_per_row'])? 1:$viewData['products_per_row'] ;
 $currency = $viewData['currency'];
