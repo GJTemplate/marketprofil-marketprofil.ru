@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site" method="upgrade">
+	<name>marketprofil</name>
+	<creationDate></creationDate>
+	<author></author>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<copyright></copyright>
+	<license></license>
+	<version></version>
+	<description></description>
+
+	<files>
+		<filename>component.php</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>marketprofil.tck3</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>language</folder>
+	</files>
+	<positions>
+		<position>logo</position>
+		<position>head-center</position>
+		<position>head-right</position>
+		<position>logo_mob</position>
+		<position>head-center_mob</position>
+		<position>head-right_mob</position>
+		<position>head-bottom_mob</position>
+		<position>top-menu</position>
+		<position>search</position>
+		<position>menu</position>
+		<position>banner</position>
+		<position>menu-bottom</position>
+		<position>news</position>
+		<position>new-item</position>
+		<position>popular-goods</position>
+		<position>rewiews</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>position-7</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_marketprofil.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="other_spacer" type="spacer" label="-- [ Other options ] --" />
+				<field name="usecsspie" type="radio" default="1" label="Use CSS PIE" description="Launch a script to emulate the CSS3 styles for Internet Explorer" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="useresponsive" type="radio" default="1" label="Use Responsive mode" description="Adapt your template design for mobile resolutions" class="btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

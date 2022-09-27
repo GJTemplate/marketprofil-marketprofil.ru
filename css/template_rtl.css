@@ -1,0 +1,448 @@
+/* ---------------------------------------
+	Standard styles formatting
+	created with Template Creator
+        on http://www.template-creator.com
+-----------------------------------------*/
+
+html {
+	height: 101/100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+ul, ol {
+	padding: .75em 0 .75em 0;
+	margin: 0 0 0 35px;
+}
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li {
+	list-style: none;
+}
+
+ul.menu li a {
+	text-decoration: none;
+}
+
+
+p {
+	padding: 5px 0;
+}
+
+.flexiblecolumn {
+	min-height: 0.1px; /* needed to keep the area of the column */
+	box-sizing: border-box;
+}
+
+.clr {
+	clear : both;
+}
+
+audio, canvas, img, svg, video {
+	max-width: 100%;
+	height: auto;
+	box-sizing: border-box;
+}
+
+table img {
+	max-width: none;
+}
+
+
+.column.column2 {
+	width: 0%;
+}
+
+.column.center {
+	width: 100%;
+}
+
+.noright .column.center {
+	width: 100%;
+}
+
+.flexiblemodule, .column, .logobloc, .flexiblecolumn {
+	float: right;
+}
+
+.rtl .flexiblemodule, .rtl .column, .rtl .logobloc, .rtl .flexiblecolumn {
+	float: right;
+}
+
+/* for equalheights */
+section > .inner > .clr,
+.flexiblemodule > .inner > .clr,
+.equalheights > .inner > .clr,
+section > .inner:before,
+.flexiblemodule > .inner:before,
+.equalheights > .inner:before,
+section > .inner:after,
+.flexiblemodule > .inner:after,
+.equalheights > .inner:after {
+	display: none;
+}
+
+section > .inner,
+.equalheights > .inner,
+.equalheights .maincenter > .inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flexiblemodule {
+	display: flex;
+	flex: 1 1 auto;
+}
+
+.flexiblemodule > .inner {
+	max-width:100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.videobackground { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background-size: cover;
+	object-fit: cover;
+}
+
+.videobackground + * { 
+	position: relative;
+	z-index: 1;
+}
+
+.hasvideobackground {
+	position: relative;
+	overflow: hidden;
+}
+
+#finder-search .in.collapse {
+	overflow: visible;
+}
+
+.valign-top {
+	align-self: flex-start;
+}
+
+.valign-center {
+	align-self: center;
+}
+
+.valign-bottom {
+	align-self: flex-end;
+}
+
+.tck-logo-img {
+	display: block;
+}
+
+.tck-logo-center img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tck-logo-right img {
+	margin-left: auto;
+}
+
+.tck-article {
+	clear: both;
+}
+
+.tck-wrapper {
+	position: relative;
+}
+
+/* ---------------------------------------
+	CSS grid for content alignement
+-----------------------------------------*/
+[class*="tck-cols"] {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+[class*="tck-cols"] > * {
+	flex: 1 1 auto;
+	box-sizing: border-box;
+}
+
+[class*="tck-gutter"] > * {
+	flex: 0 1 auto;
+}
+
+/* no gutter */
+.tck-cols-2 > * {
+	width: 50%;
+}
+
+.tck-cols-3 > * {
+	width: 33.333%;
+}
+
+.tck-cols-4 > * {
+	width: 25%;
+}
+.tck-cols-8 > * {
+	width: 12.5%;
+}
+
+/* gutter 10px */
+.tck-cols-2.tck-gutter-10 > * {
+	width: calc((100% - 10px) / 2);
+}
+
+.tck-cols-3.tck-gutter-10 > * {
+	width: calc((100% - 2 * 10px) / 3);
+}
+
+.tck-cols-4.tck-gutter-10 > * {
+	width: calc((100% - 3 * 10px) / 4);
+}
+
+.tck-cols-8.tck-gutter-10 > * {
+	width: calc((100% - 7 * 10px) / 8);
+}
+
+/* ---------------------------------------
+	Shape divider
+-----------------------------------------*/
+
+.tck-divider-container {
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	width: 100%;
+}
+
+.tck-divider-container > svg {
+	position: relative;
+	height: 100%;
+	left: 50%;
+	transform: translate(-50%);
+	min-width: 100%;
+}
+
+.tck-divider-container.pbck-divider-top {
+	top: -1px;
+}
+
+.tck-divider-container.pbck-divider-bottom {
+	bottom: -1px;
+}
+
+.tck-divider-container.pbck-divider-over {
+	z-index: 1;
+}
+
+.tck-divider-container.pbck-divider-under {
+	z-index: 0;
+}
+
+.ckflip-horizontal > svg {
+	transform: rotateY(180deg) translate(-50%);
+}
+
+.ckflip-vertical > svg {
+	transform: rotateX(180deg) translate(-50%);
+}
+
+.ckflip-horizontal.ckflip-vertical > svg {
+	transform: rotate(180deg) translate(-50%);
+}
+
+.tck-divider-container + .inner {
+	position: relative;
+}
+
+/* ---------------------------------------
+	System features
+-----------------------------------------*/
+
+.tck-edition {
+	min-height: 50px;
+	margin: 2px;
+	border: 1px dashed grey;
+	position: relative;
+}
+.tck-edition::before {
+	content: "[" attr(data-position) "]";
+	font-size: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-aign: center;
+	font-family: Segoe UI, sans-serif;
+	line-height: 1.2;
+	padding: 3px 5px;
+	background: #333;
+	display: block !important;
+	color: #fff;
+	border-radius: 3px;
+	border: 1px solid #666;
+	opacity: 0.8;
+	pointer-events: none;
+	box-sizing: content-box;
+	height: 20px;
+}
+
+undefined
+	/* ---------------------------------------
+		Error404
+	-----------------------------------------*/
+
+
+
+	/* ---------------------------------------
+		Article
+	-----------------------------------------*/
+
+
+.tck-article-details-align-h > dd {
+	display: inline-block;
+	margin-right: 10px; 
+}
+
+.tck-article-tools-right {
+	float: right;
+}
+
+.tck-article-tools ul:not(.dropdown-menu) li {
+	display: inline-block;
+}
+
+.tck-article-pagination-prev {
+	float: right;
+}
+
+.tck-article-pagination-next {
+	float: right;
+}
+
+	/* ---------------------------------------
+		Blog
+	-----------------------------------------*/
+
+
+
+	/* ---------------------------------------
+		Search
+	-----------------------------------------*/
+
+
+
+	/* ---------------------------------------
+	Custom styling
+-----------------------------------------*/
+
+.container, .container-fluid,
+.tck-container, .tck-container-fluid {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.container, .tck-container {
+	width: 1140px;
+}
+
+.container-fluid, .tck-container-fluid {
+	max-width: 1140px;
+}
+
+body {
+	color: #333333;
+	line-height: 24px;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+}
+
+a {
+	color: #1AA0E1;
+}
+
+
+a:hover,  a:focus {
+	color: #2a4959;
+}
+
+h1, div.componentheading {
+	font-weight: normal;
+	line-height: 45px;
+	font-size: 36px;
+}
+
+h2, div.contentheading {
+	font-weight: normal;
+	line-height: 36px;
+	font-size: 30px;
+}
+
+h3 {
+	font-weight: normal;
+	line-height: 30px;
+	font-size: 24px;
+}
+
+.button, button, button.btn, input.btn, .btn, .btn-group > .btn.active {
+    border: none;
+	background: #e8e8e8;
+	padding-top: 7px;
+	padding-right: 10px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+}
+
+.button:hover, button:hover, button.btn:hover, input.btn:hover, .btn:hover,
+.button:focus, button:focus, button.btn:focus, input.btn:focus, .btn:focus {
+	background: #dedede;
+}
+
+.readmore a, .readmore .btn {
+	padding-top: 7px;
+	padding-right: 10px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	font-weight: normal;
+}
+
+.invalid {border: red;}
+                
+input.inputbox, .registration input, .login input, .contact input, .contact textarea,  select,
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border: none;
+	height: auto;
+	background: #ffffff;
+	border: #c7c7c7 1px solid;
+	padding-top: 5px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+}
+
+input:focus, input.inputbox:focus, .registration input:focus, .login input:focus, .contact input:focus, .contact textarea:focus,  select:focus,
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+	border: #7d7d7d 1px solid;
+}

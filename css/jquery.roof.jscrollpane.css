@@ -1,0 +1,115 @@
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.roof_calculate .jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.roof_calculate .jspPane
+{
+	position: absolute;
+}
+
+.roof_calculate .jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 11px;
+	width: 16px;
+	height: 100%;
+	background: transparent;
+}
+
+.roof_calculate .jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: red;
+}
+
+.roof_calculate .jspCap
+{
+	display: none;
+}
+
+.roof_calculate .jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.roof_calculate .jspTrack
+{
+	position: relative;
+	background: url("../images/calcroof/scrollpane_jspTrack_backgr.png") center top repeat-y;
+}
+
+.roof_calculate .jspDrag
+{
+	background: #fff;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.roof_calculate .jspHorizontalBar .jspTrack,
+.roof_calculate .jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.roof_calculate .jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+.roof_calculate .jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.roof_calculate .jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.roof_calculate .jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.roof_calculate .jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.roof_calculate .jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}
